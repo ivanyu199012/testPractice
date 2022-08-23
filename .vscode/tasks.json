@@ -8,6 +8,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "personality_check.py" ],
+		},
+		{
+			"label": "Run complain_result",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "complain_result.py" ],
 		}
 	]
 }
