@@ -12,9 +12,7 @@ def solution(survey, choices):
 	}
 
 	cal_score(type_2_score_dict, survey, choices)
-	print(f'{ type_2_score_dict= }')
-
-	answer = ''
+	answer = get_personality_type_by( type_2_score_dict )
 	return answer
 
 def cal_score(type_2_score_dict, survey, choices):
@@ -28,6 +26,13 @@ def cal_score(type_2_score_dict, survey, choices):
 			continue
 		type_2_score_dict[ type_pair[ 0 ] ] += ( 4 - choice )
 
+def get_personality_type_by( type_2_score_dict ):
+	personality_str = ""
 
-if __name__ == '__main__':
-	solution( ["AN", "CF", "MJ", "RT", "NA"], [5, 3, 2, 7, 5] )
+	personality_type_tuple_list = [ ( "R", "T" ), ( "C", "F" ), ( "J", "M" ), ( "A", "N" ) ]
+	for personality_type_tuple in personality_type_tuple_list:
+		if type_2_score_dict[ personality_type_tuple[ 0 ] ] >= type_2_score_dict[ personality_type_tuple[ 1 ] ]:
+			personality_str += personality_type_tuple[ 0 ]
+		else:
+			personality_str += personality_type_tuple[ 1 ]
+	return personality_str
