@@ -16,10 +16,10 @@
 			"args": [ "complain_result.py" ],
 		},
 		{
-			"label": "Run same_num",
+			"label": "Run name_card_size",
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "same_num.py" ],
+			"args": [ "name_card_size.py" ],
 		}
 	]
 }
