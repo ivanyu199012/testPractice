@@ -14,6 +14,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "complain_result.py" ],
+		},
+		{
+			"label": "Run same_num",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "same_num.py" ],
 		}
 	]
 }
