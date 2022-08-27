@@ -20,6 +20,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "name_card_size.py" ],
+		},
+		{
+			"label": "Run two_queues",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "two_queues.py" ],
 		}
 	]
 }
