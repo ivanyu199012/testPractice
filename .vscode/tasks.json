@@ -32,6 +32,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "arr_compression.py" ],
+		},
+		{
+			"label": "Run open_chat_room",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "open_chat_room.py" ],
 		}
 	]
 }
