@@ -26,6 +26,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "two_queues.py" ],
+		},
+		{
+			"label": "Run arr_compression",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "arr_compression.py" ],
 		}
 	]
 }
