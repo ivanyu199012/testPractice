@@ -38,6 +38,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "open_chat_room.py" ],
+		},
+		{
+			"label": "Run cut_square",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "cut_square.py" ],
 		}
 	]
 }
