@@ -11,31 +11,54 @@ def solution( s ):
 
 	return min_compressed_length
 
+# def get_compressed_str_by( text, unit ):
+# 	compressed_str = ""
+# 	index = 0
+# 	j = 0
+# 	while True:
+
+# 		if index + unit >= len( text ):
+# 			compressed_str += text[ index : index + unit ]
+# 			break
+
+# 		if text[ index : index + unit ] != text[ index + unit : index + 2*unit ]:
+# 			compressed_str += text[ index : index + unit ]
+# 			index += unit
+# 			continue
+
+# 		repeated_amount = 1
+# 		for j in range( 2, len( text ) - unit ):
+# 			if text[ index : index + ( j - 1 ) * unit ] != text[ index + unit : index + ( j ) * unit ]:
+# 				break
+
+# 			repeated_amount = j
+
+# 		compressed_str += str( repeated_amount ) + text[ index : index + unit ]
+# 		index += ( j - 1 ) * unit
+
+# 	return compressed_str
+
 def get_compressed_str_by( text, unit ):
 	compressed_str = ""
-	index = 0
-	j = 0
-	while True:
 
-		if index + unit >= len( text ):
-			compressed_str += text[ index : index + unit ]
-			break
-
-		if text[ index : index + unit ] != text[ index + unit : index + 2*unit ]:
-			compressed_str += text[ index : index + unit ]
-			index += unit
+	count = 1
+	for i in range( unit, len( text ), unit ):
+		# print(f'{ i= }')
+		# print(f'{ compressed_str= }')
+		if text[ i - unit : i ] == text[ i : i + unit ]:
+			count += 1
 			continue
 
-		repeated_amount = 1
-		for j in range( 2, len( text ) - unit ):
-			if text[ index : index + ( j - 1 ) * unit ] != text[ index + unit : index + ( j ) * unit ]:
-				break
+		if count == 1:
+			count = ""
+		compressed_str += str( count ) + text[ i - unit : i  ]
+		count = 1
 
-			repeated_amount = j
-
-		compressed_str += str( repeated_amount ) + text[ index : index + unit ]
-		index += ( j - 1 ) * unit
-
+	# print(f'{ i= }')
+	# print(f'{ compressed_str= }')
+	if count == 1:
+		count = ""
+	compressed_str += str( count ) + text[ i: ]
 	return compressed_str
 
 if __name__ == '__main__':
@@ -45,9 +68,9 @@ if __name__ == '__main__':
 	print( solution( "abcabcabcabcdededededede" ) )
 	print( solution( "xababcdcdababcdcd" ) )
 
-	# print( get_compressed_str_by( "aabbaccc", 1 ) )
-	# print( get_compressed_str_by( "aabbaccc", 2 ) )
-	# print( get_compressed_str_by( "aabbaccc", 3 ) )
+	# print( get_compressed_str_by( "abcabcdede", 1 ) )
+	# print( get_compressed_str_by( "abcabcdede", 2 ) )
+	# print( get_compressed_str_by( "abcabcdede", 3 ) )
 	# print( "--------------------" )
 
 	# print( get_compressed_str_by( "ababcdcdababcdcd", 1 ) )
