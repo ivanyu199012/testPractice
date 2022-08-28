@@ -44,6 +44,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "cut_square.py" ],
+		},
+		{
+			"label": "Run 124_country",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "124_country.py" ],
 		}
 	]
 }
