@@ -56,6 +56,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "valid_bracket.py" ],
+		},
+		{
+			"label": "Run 기능개발",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "기능개발.py" ],
 		}
 	]
 }
