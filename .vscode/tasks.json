@@ -62,6 +62,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "기능개발.py" ],
+		},
+		{
+			"label": "Run 기능개발_queue",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "기능개발_queue.py" ],
 		}
 	]
 }
