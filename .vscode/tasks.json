@@ -50,6 +50,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "124_country.py" ],
+		},
+		{
+			"label": "Run valid_bracket",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "valid_bracket.py" ],
 		}
 	]
 }
