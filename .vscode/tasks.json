@@ -68,6 +68,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "기능개발_queue.py" ],
+		},
+		{
+			"label": "Run 더_맵게",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "더_맵게.py" ],
 		}
 	]
 }
