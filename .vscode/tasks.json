@@ -86,6 +86,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "행렬_테두리_회전하기.py" ],
+		},
+		{
+			"label": "Run 메뉴_리뉴얼",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "메뉴_리뉴얼.py" ],
 		}
 
 	]
