@@ -77,10 +77,10 @@
 		}
 		,
 		{
-			"label": "Run 타겟 넘버",
+			"label": "Run 짝지어 제거하기",
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "타겟 넘버.py" ],
+			"args": [ "짝지어 제거하기.py" ],
 		}
 	]
 }
