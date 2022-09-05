@@ -92,6 +92,12 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "메뉴_리뉴얼.py" ],
+		},
+		{
+			"label": "Run 괄호_변환",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "괄호_변환.py" ],
 		}
 
 	]
