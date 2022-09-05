@@ -74,13 +74,19 @@
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "더_맵게.py" ],
-		}
-		,
+		},
 		{
 			"label": "Run 짝지어 제거하기",
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ "짝지어 제거하기.py" ],
+		},
+		{
+			"label": "Run 행렬_테두리_회전하기",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ "행렬_테두리_회전하기.py" ],
 		}
+
 	]
 }
