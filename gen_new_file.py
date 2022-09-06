@@ -47,13 +47,13 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list):
 		# param_str = ", ".join( [ "\"" +  sample_io_dict[ param ] + "\"" for param in param_list ] )
 		for param in param_list:
 			input = sample_io_dict[ param ]
-		if ( isinstance( input, str ) and input.isdigit() ) or input[ 0 ] in ( '[', '{' ):
-			param_val_list.append( sample_io_dict[ param ] )
-		elif isinstance( input, str ):
-			param_val_list.append( "\"" + sample_io_dict[ param ] + "\"" )
+			if ( isinstance( input, str ) and input.isdigit() ) or input[ 0 ] in ( '[', '{' ):
+				param_val_list.append( sample_io_dict[ param ] )
+			elif isinstance( input, str ):
+				param_val_list.append( "\"" + sample_io_dict[ param ] + "\"" )
 
 		param_str = ", ".join( param_val_list )
-		lines.append("\tprint(f'{ solution( " + param_str + " )= }, expected_answer = " + sample_io_dict[ 'answer' ] + "')")
+		lines.append("\tprint(f'{ solution( " + param_str + " )= }, ea = " + sample_io_dict[ 'answer' ] + "')")
 		with open( filename, 'w' ) as f:
 			f.write( '\n'.join( lines ) )
 
