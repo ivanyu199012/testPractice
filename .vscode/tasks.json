@@ -1,104 +1,141 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "Run personality_check",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "personality_check.py" ],
-		},
-		{
-			"label": "Run complain_result",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "complain_result.py" ],
-		},
-		{
-			"label": "Run name_card_size",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "name_card_size.py" ],
-		},
-		{
-			"label": "Run two_queues",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "two_queues.py" ],
-		},
-		{
-			"label": "Run arr_compression",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "arr_compression.py" ],
-		},
-		{
-			"label": "Run open_chat_room",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "open_chat_room.py" ],
-		},
-		{
-			"label": "Run cut_square",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "cut_square.py" ],
-		},
-		{
-			"label": "Run 124_country",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "124_country.py" ],
-		},
-		{
-			"label": "Run valid_bracket",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "valid_bracket.py" ],
-		},
-		{
-			"label": "Run 기능개발",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "기능개발.py" ],
-		},
-		{
-			"label": "Run 기능개발_queue",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "기능개발_queue.py" ],
-		},
-		{
-			"label": "Run 더_맵게",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "더_맵게.py" ],
-		},
-		{
-			"label": "Run 짝지어 제거하기",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "짝지어 제거하기.py" ],
-		},
-		{
-			"label": "Run 행렬_테두리_회전하기",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "행렬_테두리_회전하기.py" ],
-		},
-		{
-			"label": "Run 메뉴_리뉴얼",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "메뉴_리뉴얼.py" ],
-		},
-		{
-			"label": "Run 괄호_변환",
-			"type": "shell",
-			"command": "testEnv\\Scripts\\python.exe",
-			"args": [ "괄호_변환.py" ],
-		}
-
-	]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run personality_check",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "personality_check.py"
+            ]
+        },
+        {
+            "label": "Run complain_result",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "complain_result.py"
+            ]
+        },
+        {
+            "label": "Run name_card_size",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "name_card_size.py"
+            ]
+        },
+        {
+            "label": "Run two_queues",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "two_queues.py"
+            ]
+        },
+        {
+            "label": "Run arr_compression",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "arr_compression.py"
+            ]
+        },
+        {
+            "label": "Run open_chat_room",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "open_chat_room.py"
+            ]
+        },
+        {
+            "label": "Run cut_square",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "cut_square.py"
+            ]
+        },
+        {
+            "label": "Run 124_country",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "124_country.py"
+            ]
+        },
+        {
+            "label": "Run valid_bracket",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "valid_bracket.py"
+            ]
+        },
+        {
+            "label": "Run 기능개발",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "기능개발.py"
+            ]
+        },
+        {
+            "label": "Run 기능개발_queue",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "기능개발_queue.py"
+            ]
+        },
+        {
+            "label": "Run 더_맵게",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "더_맵게.py"
+            ]
+        },
+        {
+            "label": "Run 짝지어 제거하기",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "짝지어 제거하기.py"
+            ]
+        },
+        {
+            "label": "Run 행렬_테두리_회전하기",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "행렬_테두리_회전하기.py"
+            ]
+        },
+        {
+            "label": "Run 메뉴_리뉴얼",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "메뉴_리뉴얼.py"
+            ]
+        },
+        {
+            "label": "Run 괄호_변환",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "괄호_변환.py"
+            ]
+        },
+        {
+            "label": "Run gen_new_file",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "gen_new_file.py"
+            ]
+        }
+    ]
 }
