@@ -4,7 +4,7 @@ from os.path import exists
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://school.programmers.co.kr/learn/courses/30/lessons/67257"
+URL = "https://school.programmers.co.kr/learn/courses/30/lessons/64065"
 
 def main():
 	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict()
@@ -73,7 +73,8 @@ def get_practice_name_n_sample_io_dict():
 	sample_io_title = None
 	SAMPLE_IO_TITLE_LIST = [
 		soup.find( "h3", string='예제 입출력' ),
-		soup.find( "h5", string='입출력 예' )
+		soup.find( "h5", string='입출력 예' ),
+		soup.find( "h5", string='[입출력 예]' ),
 		 ]
 	for finder in SAMPLE_IO_TITLE_LIST:
 		if finder:
