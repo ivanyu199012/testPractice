@@ -160,6 +160,14 @@
             "args": [
                 "수식_최대화.py"
             ]
+        },
+        {
+            "label": "Run 튜플.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "튜플.py"
+            ]
         }
     ]
 }
