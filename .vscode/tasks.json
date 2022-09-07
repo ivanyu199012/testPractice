@@ -136,6 +136,14 @@
             "args": [
                 "gen_new_file.py"
             ]
+        },
+        {
+            "label": "Run [1차]_뉴스_클러스터링.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "[1차]_뉴스_클러스터링.py"
+            ]
         }
     ]
 }
