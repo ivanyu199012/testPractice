@@ -144,6 +144,14 @@
             "args": [
                 "[1차]_뉴스_클러스터링.py"
             ]
+        },
+        {
+            "label": "Run 거리두기_확인하기.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "거리두기_확인하기.py"
+            ]
         }
     ]
 }
