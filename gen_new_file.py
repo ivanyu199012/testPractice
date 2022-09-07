@@ -4,7 +4,7 @@ from os.path import exists
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://school.programmers.co.kr/learn/courses/30/lessons/81302"
+URL = "https://school.programmers.co.kr/learn/courses/30/lessons/67257"
 
 def main():
 	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict()
@@ -46,7 +46,7 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword
 		param_val_list = []
 		for param in param_list:
 			input = sample_io_dict[ param ]
-			if ( isinstance( input, str ) and input.isdigit() ) or input[ 0 ] in ( '[', '{' ):
+			if ( isinstance( input, str ) and input.isdigit() ) or input[ 0 ] in ( '[', '{', "\"" ):
 				param_val_list.append( sample_io_dict[ param ] )
 			elif isinstance( input, str ):
 				param_val_list.append( "\"" + sample_io_dict[ param ] + "\"" )
