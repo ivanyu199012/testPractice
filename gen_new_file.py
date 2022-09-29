@@ -4,7 +4,7 @@ from os.path import exists
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://school.programmers.co.kr/learn/courses/30/lessons/64065"
+URL = "https://school.programmers.co.kr/learn/courses/30/lessons/86052"
 
 def main():
 	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict()

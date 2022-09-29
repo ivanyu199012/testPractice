@@ -168,6 +168,14 @@
             "args": [
                 "튜플.py"
             ]
+        },
+        {
+            "label": "Run 빛의_경로_사이클.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "빛의_경로_사이클.py"
+            ]
         }
     ]
 }
