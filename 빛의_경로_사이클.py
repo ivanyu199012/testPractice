@@ -8,8 +8,9 @@ def solution( grid ):
 
 	w, h = len( grid ), len( grid[ 0 ] )
 	print(f'{ w, h= }')
+	print(f'{ grid= }')
 
-	cases = [ [  [ 1 ] * 4 for _ in range( w ) ] for _ in range( h ) ]
+	cases = [ [  [ 1 ] * 4 for _ in range( h ) ] for _ in range( w ) ]
 	for i in range( w ):
 		for j in range( h ):
 			for k in range( 4 ):
@@ -17,30 +18,30 @@ def solution( grid ):
 				if cases[ i ][ j ][ k ] == 0:
 					continue
 
-				cases[ i ][ j ][ k ] = 0
 				count = 0
 
 				tx, ty, td = i, j, k
 				while True:
-
-					print(f'before contraction:{ tx, ty, td= }')
+					cases[ tx ][ ty ][ td ] = 0
+					# print(f'before contraction:{ tx, ty, td= }')
 					count += 1
-					mirror = grid[ i ][ j ]
+					mirror = grid[ tx ][ ty ]
+					# print(f'{ mirror= }')
 					if mirror == "R":
 						td = right[ td ]
 					elif mirror == "L":
 						td = left[ td ]
 
-					tx, ty = ( tx + directions[ td ][ 0 ] ) % w, ( ty + directions[ td ][ 1 ] ) % w
-					print(f'after contraction:{ tx, ty, td= }')
+					tx, ty = ( tx + directions[ td ][ 1 ] ) % w, ( ty + directions[ td ][ 0 ] ) % h
+					# print(f'after contraction:{ tx, ty, td= }')
 					if tx == i:
 						if ty == j:
 							if td == k:
 								break
 
 				result.append( count )
-
-	# return result
+	result.sort()
+	return result
 
 if __name__ == '__main__':
 	print(f'{ solution( ["SL","LR"] )= }, ea = [16]')
