@@ -4,10 +4,14 @@ from os.path import exists
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://school.programmers.co.kr/learn/courses/30/lessons/86052"
+# URL = "https://school.programmers.co.kr/learn/courses/30/lessons/132265"
 
 def main():
-	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict()
+
+	f = open("url.txt", "r")
+	url = f.read()
+
+	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict( url )
 	print(f'{ practice_name, sample_io_dict_list, param_list= }')
 
 	filename = gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword)
@@ -59,8 +63,8 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword
 	return filename
 
 
-def get_practice_name_n_sample_io_dict():
-	response = requests.get( URL )
+def get_practice_name_n_sample_io_dict( url):
+	response = requests.get( url )
 
 	if response.status_code != 200:
 		raise Exception(f"{ response.status_code= }")

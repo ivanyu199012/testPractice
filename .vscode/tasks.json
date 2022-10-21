@@ -176,6 +176,14 @@
             "args": [
                 "빛의_경로_사이클.py"
             ]
+        },
+        {
+            "label": "Run 롤케이크_자르기.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "롤케이크_자르기.py"
+            ]
         }
     ]
 }
