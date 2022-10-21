@@ -10,26 +10,33 @@ def main():
 	url = f.read()
 
 	practice_name, sample_io_dict_list, param_list, output_keyword = get_practice_name_n_sample_io_dict( url )
-	print(f'{ practice_name, sample_io_dict_list, param_list= }')
 
 	filename = gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword)
-	print(f'{ filename= }')
 
 	tasks_obj = None
 	with open('.vscode/tasks.json', 'r', encoding="utf-8") as f:
 		tasks_obj = json.load( f )
 
-	tasks_obj[ "tasks" ].append( {
-		"label": f"Run { filename }",
-		"type": "shell",
-		"command": "testEnv\\Scripts\\python.exe",
-		"args": [ filename ]
-	} )
+	task_label = f"Run { filename }"
+	is_created = False
+	for task in tasks_obj[ "tasks" ]:
+		if task[ "label" ] == task_label:
+			is_created = True
+			break
+
+	if not is_created:
+		tasks_obj[ "tasks" ].append( {
+			"label": f"{ task_label }",
+			"type": "shell",
+			"command": "testEnv\\Scripts\\python.exe",
+			"args": [ filename ]
+		} )
 
 	with open('.vscode/tasks.json', "w", encoding="utf-8") as f:
 		f.write( json.dumps( tasks_obj, indent=4, ensure_ascii=False ) )
 
-
+	print(f'{ filename= }')
+	print(f'{ task_label= }')
 
 def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword):
 
@@ -37,11 +44,12 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword
 	# if exists( filename ):
 	# 	raise Exception( f"File { filename } already exists" )
 
+	output_var_name = "answer"
 	lines = []
 	lines.append("#")
 	lines.append(f"def solution( { ', '.join( param_list ) } ):")
-	lines.append(f"\t{ output_keyword } = { sample_io_dict_list[ 0 ][ output_keyword ] }")
-	lines.append(f"\treturn { output_keyword }")
+	lines.append(f"\t{ output_var_name } = { sample_io_dict_list[ 0 ][ output_keyword ] }")
+	lines.append(f"\treturn { output_var_name }")
 	lines.append(f"")
 	lines.append(f"if __name__ == '__main__':")
 	for sample_io_dict in sample_io_dict_list:
@@ -59,7 +67,6 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword
 			f.write( '\n'.join( lines ) )
 
 	return filename
-
 
 def get_practice_name_n_sample_io_dict( url):
 	response = requests.get( url )

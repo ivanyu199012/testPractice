@@ -192,6 +192,14 @@
             "args": [
                 "택배상자.py"
             ]
+        },
+        {
+            "label": "Run 최댓값과_최솟값.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "최댓값과_최솟값.py"
+            ]
         }
     ]
 }
