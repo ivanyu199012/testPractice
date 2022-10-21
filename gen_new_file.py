@@ -4,8 +4,6 @@ from os.path import exists
 import requests
 from bs4 import BeautifulSoup
 
-# URL = "https://school.programmers.co.kr/learn/courses/30/lessons/132265"
-
 def main():
 
 	f = open("url.txt", "r")
