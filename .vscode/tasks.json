@@ -184,6 +184,14 @@
             "args": [
                 "롤케이크_자르기.py"
             ]
+        },
+        {
+            "label": "Run 택배상자.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "택배상자.py"
+            ]
         }
     ]
 }
