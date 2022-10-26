@@ -62,7 +62,7 @@ def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword
 				param_val_list.append( "\"" + sample_io_dict[ param ] + "\"" )
 
 		param_str = ", ".join( param_val_list )
-		lines.append("\tprint(f'{ solution( " + param_str + " )= }, ea = " + sample_io_dict[ output_keyword ] + "')")
+		lines.append("\tprint(f'{ solution( " + param_str + " )= }, ea = " + sample_io_dict[ output_keyword ] + ", test result={ " + "solution( " + param_str + " )==" + sample_io_dict[ output_keyword ] + " }')")
 		with open( filename, 'w' ) as f:
 			f.write( '\n'.join( lines ) )
 
