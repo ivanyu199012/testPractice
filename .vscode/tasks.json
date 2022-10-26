@@ -208,6 +208,14 @@
             "args": [
                 "JadenCase_문자열_만들기.py"
             ]
+        },
+        {
+            "label": "Run 최솟값_만들기.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "최솟값_만들기.py"
+            ]
         }
     ]
 }
