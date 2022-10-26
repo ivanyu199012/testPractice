@@ -216,6 +216,14 @@
             "args": [
                 "최솟값_만들기.py"
             ]
+        },
+        {
+            "label": "Run 이진_변환_반복하기.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "이진_변환_반복하기.py"
+            ]
         }
     ]
 }
