@@ -13,30 +13,41 @@ def main():
 
 	filename = gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword)
 
+	task_label = gen_new_task( filename )
+
+	print(f'{ filename= }')
+	print(f'{ task_label= }')
+
+def gen_new_task( filename ):
 	tasks_obj = None
 	with open('.vscode/tasks.json', 'r', encoding="utf-8") as f:
 		tasks_obj = json.load( f )
 
 	task_label = f"Run { filename }"
 	is_created = False
+	new_task_arr = []
 	for task in tasks_obj[ "tasks" ]:
-		if task[ "label" ] == task_label:
+		if task[ "label" ] in [ task_label, "Run gen_new_file" ]:
+			new_task_arr.append( task )
+
+		if task[ "label" ] in [ task_label ]:
 			is_created = True
 			break
 
+
 	if not is_created:
-		tasks_obj[ "tasks" ].append( {
+		new_task_arr.append( {
 			"label": f"{ task_label }",
 			"type": "shell",
 			"command": "testEnv\\Scripts\\python.exe",
 			"args": [ filename ]
 		} )
 
+	tasks_obj[ "tasks" ] = new_task_arr
+
 	with open('.vscode/tasks.json', "w", encoding="utf-8") as f:
 		f.write( json.dumps( tasks_obj, indent=4, ensure_ascii=False ) )
-
-	print(f'{ filename= }')
-	print(f'{ task_label= }')
+	return task_label
 
 def gen_code_file(practice_name, sample_io_dict_list, param_list, output_keyword):
 
