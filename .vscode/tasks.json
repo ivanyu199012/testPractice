@@ -224,6 +224,14 @@
             "args": [
                 "이진_변환_반복하기.py"
             ]
+        },
+        {
+            "label": "Run 숫자의_표현.py",
+            "type": "shell",
+            "command": "testEnv\\Scripts\\python.exe",
+            "args": [
+                "숫자의_표현.py"
+            ]
         }
     ]
 }
