@@ -1,23 +1,3 @@
-#
-# def solution( triangle ):
-
-# 	sum = 0
-# 	sum = cal_tri_sum( triangle, 0, sum, 0 )
-
-# 	return sum
-
-# def cal_tri_sum( triangle, layer, sum, index ):
-
-# 	sum += triangle[ layer ][ index ]
-
-# 	if layer == ( len( triangle ) - 1):
-# 		return sum
-
-# 	sum1 = cal_tri_sum( triangle, layer + 1, sum, index )
-# 	sum2 = cal_tri_sum( triangle, layer + 1, sum, index + 1 )
-# 	return max( sum1, sum2 )
-
-
 def solution( triangle ):
 	print("solution started")
 
@@ -52,4 +32,4 @@ def solution( triangle ):
 
 if __name__ == '__main__':
 	result = solution( [[7], [3, 8], [8, 1, 0], [2, 7, 4, 4], [4, 5, 2, 6, 5]] )
-	print(f'{ result= }, ea = 30, Result = { result==30 }')
+	print(f'solution( [[7], [3, 8], [8, 1, 0], [2, 7, 4, 4], [4, 5, 2, 6, 5]] )= { result }, ea = 30, Test = { result ==30 }')
