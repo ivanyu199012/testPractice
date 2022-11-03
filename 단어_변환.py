@@ -14,7 +14,7 @@ def solution( begin, target, words : list ):
 			if get_word_diff( word_i, word_j ) == 1:
 				word_2_neighors_dict[ word_i ].append( word_j )
 
-	visited_set = set()
+	word_2_is_visited_dict = dict.fromkeys( words, False )
 	not_visited_queue = deque( [ ( begin, 0 ) ] )
 	while len( not_visited_queue ) > 0:
 		word, count = not_visited_queue.popleft()
@@ -22,12 +22,12 @@ def solution( begin, target, words : list ):
 		if word == target:
 			return count
 
-		if word in visited_set:
+		if word_2_is_visited_dict[ word ]:
 			continue
-		visited_set.add( word )
+		word_2_is_visited_dict[ word ] = True
 
 		for neighbor in word_2_neighors_dict[ word ]:
-			if not neighbor in visited_set:
+			if not word_2_is_visited_dict[ neighbor ]:
 				not_visited_queue.append( ( neighbor, count + 1 ) )
 
 	return 0
