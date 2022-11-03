@@ -10,11 +10,11 @@
             ]
         },
         {
-            "label": "Run 단어_변환.py",
+            "label": "Run 아이템_줍기.py",
             "type": "shell",
             "command": "testEnv\\Scripts\\python.exe",
             "args": [
-                "단어_변환.py"
+                "아이템_줍기.py"
             ]
         }
     ]
