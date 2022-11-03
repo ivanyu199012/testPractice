@@ -10,11 +10,11 @@
             ]
         },
         {
-            "label": "Run 네트워크.py",
+            "label": "Run 게임_맵_최단거리.py",
             "type": "shell",
             "command": "testEnv\\Scripts\\python.exe",
             "args": [
-                "네트워크.py"
+                "게임_맵_최단거리.py"
             ]
         }
     ]
