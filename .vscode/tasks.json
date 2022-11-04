@@ -10,11 +10,11 @@
             ]
         },
         {
-            "label": "Run 여행경로.py",
+            "label": "Run 베스트앨범.py",
             "type": "shell",
             "command": "testEnv\\Scripts\\python.exe",
             "args": [
-                "여행경로.py"
+                "베스트앨범.py"
             ]
         }
     ]
