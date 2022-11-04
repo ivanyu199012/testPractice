@@ -30,7 +30,6 @@ def solution( genres, plays ):
 	for genre in genre_list:
 		play_indexes : list = genre_2_view_count_N_plays_dict[ genre ][ "play_indexes" ]
 		play_indexes.sort( key=compare_play_key, reverse=True )
-		print(f'{ play_indexes= }')
 
 		if len( play_indexes ) >= 2:
 			answer += play_indexes[ :2 ]
