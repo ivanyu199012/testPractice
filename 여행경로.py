@@ -2,39 +2,40 @@
 from collections import deque
 
 def solution(tickets):
-	not_visited_queue = deque( [ ( "ICN", 0, [ False for _ in tickets ], [ "ICN" ] ) ] )
-	answer_arr = []
-	while len( not_visited_queue ) > 0:
-		departure, count, is_used_tickets_arr, path = not_visited_queue.popleft()
-		if count == len( tickets ):
-			answer_arr.append( path )
-			continue
 
-		for i in range( len( tickets ) ):
-			if is_used_tickets_arr[ i ]:
-				continue
+	dep_2_des_list_dict = dict()
+	for dep, dest in tickets:
+		dep_2_des_list_dict[ dep ] = dep_2_des_list_dict.get( dep, [] ) + [ dest ]
 
-			ticket_departure, ticket_arrival = tickets[ i ]
-			if ticket_departure == departure:
-				new_is_used_tickets_arr = is_used_tickets_arr.copy()
-				new_path = path.copy()
-				new_is_used_tickets_arr[ i ] = True
-				new_path.append( ticket_arrival )
-				not_visited_queue.append( ( ticket_arrival, count + 1, new_is_used_tickets_arr, new_path ) )
+	for dep in dep_2_des_list_dict.keys():
+		dep_2_des_list_dict[ dep ].sort( reverse = True )
 
-	if len( answer_arr ) == 1:
-		return answer_arr[ 0 ]
+	path_len = len( tickets ) + 1
+	path = []
+	if dfs( "ICN", path, dep_2_des_list_dict, path_len ):
+		answer = path
 
-	answer_arr_len = len( answer_arr[ 0 ] )
-	for i in range( 1, answer_arr_len ):
-		element_arr = [ answer[ i ] for answer in answer_arr ]
-		element_arr.sort()
-		new_answer_arr = [ answer for answer in answer_arr if answer[ i ] == element_arr[ 0 ] ]
-		answer_arr = new_answer_arr
-		if len( answer_arr ) == 1:
-			return answer_arr[ 0 ]
+	return answer
 
-	return answer_arr[ 0 ]
+def dfs( departure, path, dep_2_des_list_dict, path_len ):
+	path.append( departure )
+	if len( path ) == path_len:
+		return True
+
+	if not departure in dep_2_des_list_dict:
+		path.pop()
+		return False
+
+	for _ in range( len( dep_2_des_list_dict[ departure ] ) ):
+		dest = dep_2_des_list_dict[ departure ].pop()
+
+		if dfs( dest, path, dep_2_des_list_dict, path_len ):
+			return True
+
+		dep_2_des_list_dict[ departure ].insert( 0, dest )
+
+	path.pop()
+	return False
 
 if __name__ == '__main__':
 	result = solution( [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]] )
